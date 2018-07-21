@@ -7,6 +7,3 @@ Github contrib viz is a small tool to visualize the number of contribution (by c
 Built using jQuery and d3.js .<br>
 <br>
 <br>
-<h2>Where is it?</h2>
-<br>
-
