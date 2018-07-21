@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User repo visualization</title>
+    <!--Font-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--My CSS-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="bd-pageheader">
+      <div class="container">  
+        <h1>Create repos</h1>
+        <p>Create a repository on github and submit file.</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div id="create-repo" class="row">
+
+        <div class="col-lg-offset-3 col-lg-6">
+          <h3>Create repo</h3>
+
+          <form id="repoForm" onsubmit="return false;">
+
+            <fieldset class="form-group">
+              <label for="folder">Select files</label>
+              <input placeholder="folder" name="folder" id="folder" webkitdirectory directory type="file">
+            </fieldset>
+
+            <fieldset class="form-group">
+              <label for="username">Username</label>
+              <input id="username" class="form-control" name="username" required type="text" class="demo-form">
+            </fieldset>
+            
+            <fieldset class="form-group">
+              <label for="password">Password</label>
+              <input id="password" class="form-control" name="password" required type="password">
+            </fieldset>
+
+            <fieldset class="form-group">
+              <label for="name">Title</label>
+              <input  id="name" class="form-control" name="name" required type="text">
+            </fieldset>
+
+            <fieldset class="form-group">
+              <label for="description">Description</label>
+              <textarea id="description" class="form-control" name="description" row="3" required type="text"></textarea>
+            </fieldset>
+              
+            <input id="repoSubmit" class="btn btn-primary" value="Create repo" type="submit">
+          </form> 
+
+          <div id="results"></div>  
+
+        </div>
+      </div>
+      
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/create-app.js"></script>
+  </body>
+</html>

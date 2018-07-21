@@ -1,0 +1,174 @@
+body{
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	background: linear-gradient(45deg, #22465c, #36a9b0);
+}
+.container{
+	background: #354052;
+	padding: 0;
+	margin-bottom: 40px;
+}
+#main{
+	background: #FFF;
+	border-radius: 4px;
+}
+li{
+	text-decoration: none;
+	list-style: none;
+	cursor: pointer;
+	color: #7b8698;
+}
+li:hover {
+	color: #fff;
+}
+#issueForm #description{
+	max-width: 555px;
+	max-height: 300px;
+}
+.btn{
+	background: #3498db;
+}
+.btn:hover{
+	background: #2980b9;
+}
+.bd-pageheader{
+	height: 150px;
+	text-align: center;
+}
+h1, #user-row h3{
+	color: #fff;
+}
+h3{
+	color: #56555d;
+}
+#user-row{
+	height: auto;
+	text-align: center;
+	padding: 0;
+}
+#user-row .list-group-item{
+	background: #354052;
+	border: none;
+	border-radius: 0;
+
+}
+#user-repos .list-group-item{
+	border-left: 0px;
+	transition: all 0.2s ease-in;
+}
+#user-repos .list-group-item:hover{
+	background: #30394a;
+	border-left: 4px solid #15acfb;
+}
+#user-row a.list-group-item{
+	color: #fff;
+}
+#user-name{
+	min-height: 16.125em;
+	color: #fff;
+	border-bottom: 2px solid #2c3749;
+	border-top: 2px solid #2c3749;
+}
+#search-row{
+	margin: 0 -15px;
+	padding-bottom: 20px;
+	color: #cacdd4;
+	background-color: #fff;
+}
+#details h3{
+	margin-left: 10px;
+}
+#search-row .btn{
+	margin-top: 34.5px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	height: 34px
+}
+#search-row label{
+	float: left;
+	font-weight: 300;
+}
+#search-row fieldset{
+	margin-top: 10px;
+}
+.form-control, .form-group{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;	
+}
+.form-group{
+	margin-right: 0;
+	padding-right: 0;
+}
+#searchForm{
+	border-top: 2px solid #d7dce0;
+}
+#viz {
+	min-height: 36em;
+	border-top: 2px solid #e4e9ed;
+}
+#viz, #issue-row, #separator{
+	background: #edf2f6;
+}
+#separator{
+	padding: 20px 0;
+}
+#separator span{
+	height: 2px;
+	background: #d7dce0;
+}
+#issue-row{
+	padding-bottom: 5em;
+}
+#submit-issue{
+	margin-left: 20px;
+}
+#issueForm fieldset{
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+#submit-issue .list-group-item.active{
+	background: #6f7e95;
+	border: none;
+}
+#submit-issue h3{
+	color: #fff;
+}
+#issueForm label{
+	color: #6f7e95;
+}
+#issueForm input, #issueForm #description{
+	border-radius: 4px;
+}
+#issueSubmit{
+	margin-top: 20px;
+}
+.btn{
+	background: #6f7e95;
+	border: none;
+}
+#open-issue h4.list-group-item{
+	margin-top: 0;
+	font-weight: bold;
+}
+#open-issue .list-group-item{
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+}
+#open-issue h5, #open-issue p, #open-issue h4{
+	color: #616872;
+}
+#open-issue h5.list-group-item{
+	border-bottom: 2px solid #d7dce0;	
+}
+#issue-display{
+	text-align: center;
+}
+#issue-display h3{
+	margin: 28px 0 20px;
+}
+@media (min-width: 1440px){
+	#user-row{
+		min-height: 82em;
+	}
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User repo visualization</title>
+    <!--Font-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--My CSS-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/graphic.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="bd-pageheader">
+        <h1>User repo viz</h1>
+    </div>
+
+    <div class="container">
+
+      <!--User profil & repos-->
+      <div id="user-row" class="col-lg-3 col-sm-2 col-xs-12">
+            <h3>User profil</h3>
+            <div id="user-name" class="list-group"></div>
+            <div id="user-repos" class="list-group link"></div>
+      </div>
+
+      <!--Search, Issue, Chart-->
+      <div id="details" class="col-lg-9 col-sm-10 col-xs-12">
+
+          <!--Search row-->
+          <div id="search-row" class="row">
+              <h3>Search user</h3>
+              <form id="searchForm" class="col-lg-12 col-sm-12 col-xs-12">
+                <fieldset class="form-group col-lg-8 col-sm-6 col-xs-9">
+                  <label for="term">Enter username</label>
+                  <input id="term" class="form-control" type="text"/>
+                </fieldset>
+                <input class="btn btn-primary col-lg-1 col-sm-2 col-xs-3" type="submit" value="search">
+              </form>
+
+              <div id="search-fail"></div>
+
+          </div>
+
+          <!--Chart display-->
+          <div id="viz" class="row">
+            <h3>Chart</h3>
+            <div id="repo-stat" class="col-lg-12 col-sm-12 col-xs-12">
+              <div id="chart" class="col-lg-12 col-sm-12 col-xs-12"></div>
+            </div>
+          </div>
+
+          <div id="separator" class="row">
+            <span class="col-lg-8 col-sm-8 col-xs-8 col-lg-offset-2 col-sm-offset-2 col-xs-offset-2"></span>
+          </div>
+          <!--Issue-->
+          <div id="issue-row" class="row">
+
+              <!--Submit Issue-->
+              <div id="submit-issue" class="list-group col-lg-6 col-sm-6 col-xs-11">
+                <div class="list-group-item active">
+                  <h3>Submit issue</h3>
+                </div>
+                <form id="issueForm" class="list-group-item" onsubmit="return false;">
+
+                  <fieldset class="form-group">
+                    <label for="username">Username</label>
+                    <input id="username" class="form-control" name="username" required="" type="text" class="demo-form">
+                  </fieldset>
+                  
+                  <fieldset class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" class="form-control" name="password" required="" type="password">
+                  </fieldset>
+
+                  <fieldset class="form-group">
+                    <label for="title">Title</label>
+                    <input  id="title" class="form-control" name="title" required="" type="text">
+                  </fieldset>
+
+                  <fieldset class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" class="form-control" name="description" row="3" required="" type="text"></textarea>
+                  </fieldset>
+
+                  <div>
+                    <input id="issueSubmit" class="btn btn-primary" value="Submit Issue" type="submit">
+                    <div id="results">
+                      <p></p>
+                    </div>  
+                  </div>
+                </form> 
+              </div>
+
+              <!--Issue display-->
+              <div id="issue-display" class="col-lg-4 col-sm-4 cold-xs-8">
+                <h3>Open issue(s)</h3>   
+                <div id="open-issue" class="list-group"></div>       
+                <div id="issue-fail"></div>
+              </div>
+
+          </div>
+      
+      </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/search-app.js"></script>
+  </body>
+</html>
